@@ -9,7 +9,8 @@
     "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "types": ["vite/client"]
+    "esModuleInterop": true,
+    "types": ["vite/client", "jest"]
   },
   "include": ["src"]
 }
