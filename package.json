@@ -38,7 +38,15 @@
     "format:check": "prettier . --check",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{js,json,html,css,md}": "prettier --check"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -46,7 +54,9 @@
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.14.0",
+    "husky": "^9.1.7",
     "jest": "^30.5.2",
+    "lint-staged": "^17.6.0",
     "prettier": "3.9.10",
     "ts-jest": "^29.4.15",
     "typescript": "~6.0.3",
