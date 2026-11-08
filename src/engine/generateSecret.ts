@@ -1,5 +1,5 @@
-import { DIGITS } from './constants';
-import type { Base } from './types';
+import { DIGITS } from '../core/constants';
+import type { Base } from '../core/types';
 
 const pickDigits = (
   available: string,

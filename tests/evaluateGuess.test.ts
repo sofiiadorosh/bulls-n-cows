@@ -1,4 +1,4 @@
-import { evaluateGuess } from './evaluateGuess';
+import { evaluateGuess } from '../src/engine/evaluateGuess';
 
 type Case = { secret: string; guess: string; bulls: number; cows: number };
 

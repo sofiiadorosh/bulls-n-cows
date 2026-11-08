@@ -1,5 +1,5 @@
 import { createDigitValidator } from './createDigitValidator';
-import type { Base } from './types';
+import type { Base } from '../core/types';
 
 export const isValidGuess = (
   guess: string,

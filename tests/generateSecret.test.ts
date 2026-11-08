@@ -1,6 +1,6 @@
-import { generateSecret } from './generateSecret';
-import { isValidGuess } from './isValidGuess';
-import type { Base } from './types';
+import { generateSecret } from '../src/engine/generateSecret';
+import { isValidGuess } from '../src/engine/isValidGuess';
+import type { Base } from '../src/core/types';
 
 const createSequence = (values: number[]) => {
   let index = 0;

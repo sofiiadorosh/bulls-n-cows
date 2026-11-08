@@ -1,4 +1,4 @@
-import { countPossibleSecrets } from './countPossibleSecrets';
+import { countPossibleSecrets } from '../src/engine/countPossibleSecrets';
 
 type Case = { length: number; base: number; expected: number };
 

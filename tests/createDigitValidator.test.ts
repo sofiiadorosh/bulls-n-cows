@@ -1,4 +1,4 @@
-import { createDigitValidator } from './createDigitValidator';
+import { createDigitValidator } from '../src/engine/createDigitValidator';
 
 describe('createDigitValidator', () => {
   it('returns a predicate function', () => {

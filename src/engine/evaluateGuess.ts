@@ -1,4 +1,4 @@
-import type { GuessResult } from './types';
+import type { GuessResult } from '../core/types';
 
 export const evaluateGuess = (secret: string, guess: string): GuessResult => {
   const secretChars = [...secret.toLowerCase()];

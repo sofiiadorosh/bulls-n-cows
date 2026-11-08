@@ -1,4 +1,4 @@
-import { memoize } from './memoize';
+import { memoize } from '../src/engine/memoize';
 
 describe('memoize', () => {
   it('returns the same result as the original function', () => {

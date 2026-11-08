@@ -1,5 +1,5 @@
-import { isValidGuess } from './isValidGuess';
-import type { Base } from './types';
+import { isValidGuess } from '../src/engine/isValidGuess';
+import type { Base } from '../src/core/types';
 
 type Case = { guess: string; length: number; base: Base };
 

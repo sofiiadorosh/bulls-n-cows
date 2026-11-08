@@ -12,5 +12,5 @@
     "esModuleInterop": true,
     "types": ["vite/client", "jest"]
   },
-  "include": ["src"]
+  "include": ["src", "tests"]
 }

@@ -1,6 +1,6 @@
-import { evaluateGuess } from './evaluateGuess';
-import { generateSecret } from './generateSecret';
-import { isValidGuess } from './isValidGuess';
+import { evaluateGuess } from '../engine/evaluateGuess';
+import { generateSecret } from '../engine/generateSecret';
+import { isValidGuess } from '../engine/isValidGuess';
 import type { GameState, GuessEntry, Settings } from './types';
 
 export const createGame = (

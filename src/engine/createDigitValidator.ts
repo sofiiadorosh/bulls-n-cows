@@ -1,5 +1,5 @@
-import { DIGITS } from './constants';
-import type { Base, DigitValidator } from './types';
+import { DIGITS } from '../core/constants';
+import type { Base, DigitValidator } from '../core/types';
 
 export const createDigitValidator = (base: Base): DigitValidator => {
   const allowedDigits = DIGITS.slice(0, base);
