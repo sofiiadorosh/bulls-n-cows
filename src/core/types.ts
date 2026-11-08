@@ -28,3 +28,11 @@ export type GameState = {
   readonly startedAt: number;
   readonly finishedAt: number | null;
 };
+
+export type GameRecord = {
+  readonly attempts: number;
+  readonly time: number;
+  readonly length: number;
+  readonly base: Base;
+  readonly date: number;
+};
