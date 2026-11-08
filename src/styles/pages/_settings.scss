@@ -1,0 +1,43 @@
+.rules {
+  .hint {
+    text-align: center;
+  }
+
+  &__example {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 12px;
+  }
+
+  &__label {
+    font-weight: 800;
+    text-align: right;
+  }
+
+  &__legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+  }
+}
+
+.settings {
+  align-items: center;
+  text-align: center;
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__locked {
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.records {
+  display: grid;
+  grid-template-columns: minmax(2em, auto) repeat(4, minmax(max-content, 1fr));
+  font-variant-numeric: tabular-nums;
+
+  &__row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+    border-bottom: 2px dashed $ui-divider;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &_header {
+      font-weight: 800;
+      border-bottom: $ui-outline solid $ui-ink;
+    }
+
+    &_highlighted {
+      background: $ui-cream;
+      border-radius: 10px;
+    }
+  }
+
+  &__cell {
+    padding: 8px;
+
+    @include mobile {
+      padding: 8px 4px;
+    }
+  }
+}

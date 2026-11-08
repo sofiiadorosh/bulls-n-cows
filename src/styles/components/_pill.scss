@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+.pill {
+  padding: 4px 12px;
+  display: inline-block;
+  font-weight: 800;
+  white-space: nowrap;
+  border: 2px solid $ui-ink;
+  border-radius: 999px;
+
+  &_bull {
+    background: $ui-green;
+  }
+
+  &_cow {
+    background: $ui-orange;
+  }
+}
+
+.badge {
+  padding: 4px 8px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  background: $ui-blue;
+  border: 2px solid $ui-ink;
+  border-radius: 999px;
+}

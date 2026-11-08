@@ -12,3 +12,5 @@ export const BASE_NAMES = {
 } as const;
 
 export const RECORDS_LIMIT = 10;
+
+export const DEFAULT_SETTINGS = { length: 4, base: 10 } as const;

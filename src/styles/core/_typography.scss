@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+body {
+  font-family: $ui-font;
+  line-height: 1.5;
+  color: $ui-ink;
+  background-color: $page-background;
+  background-image: radial-gradient($page-dot 2px, transparent 2px);
+  background-size: $page-dot-size $page-dot-size;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h2 {
+  font-family: $logo-font;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hint {
+  color: $ui-muted;
+}

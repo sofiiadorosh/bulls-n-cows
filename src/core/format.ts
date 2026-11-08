@@ -11,3 +11,6 @@ export const formatTime = (ms: number): string => {
 
 export const formatSettings = ({ length, base }: Settings): string =>
   `${length} · ${BASE_NAMES[base]}`;
+
+export const pluralize = (count: number, word: string): string =>
+  `${count} ${count === 1 ? word : `${word}s`}`;
