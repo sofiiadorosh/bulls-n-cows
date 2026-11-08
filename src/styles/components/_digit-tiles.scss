@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *;
+
+.digit-tiles {
+  display: inline-flex;
+  gap: 4px;
+
+  &__tile {
+    width: 32px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    font-family: $logo-font;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: $ui-cream;
+    border: 2px solid $ui-ink;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+
+  &__label {
+    font-weight: 800;
+    text-align: center;
+  }
+
+  &__button {
+    min-width: 160px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    color: $ui-ink;
+    background: $ui-cream;
+    @include ui-box(12px, 3px);
+    @include ui-press(3px);
+    @include focus-ring;
+
+    &:disabled {
+      background: $ui-disabled;
+      box-shadow: none;
+      opacity: 0.8;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    @include mobile {
+      min-width: 128px;
+    }
+  }
+
+  &__arrow {
+    width: 8px;
+    height: 8px;
+    border-right: $ui-outline solid $ui-ink;
+    border-bottom: $ui-outline solid $ui-ink;
+    transform: translateY(-3px) rotate(45deg);
+    transition: transform 150ms $timing-function;
+  }
+
+  &_open &__arrow {
+    transform: translateY(2px) rotate(-135deg);
+  }
+
+  &__list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding: 4px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: $ui-white;
+    @include ui-box(14px);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_open &__list {
+    display: flex;
+  }
+
+  &__option {
+    padding: 8px 12px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &_active {
+      background: $ui-cream;
+      border-color: $ui-ink;
+    }
+
+    &_selected {
+      background: $ui-green;
+    }
+
+    &_disabled {
+      color: $ui-muted;
+      text-decoration: line-through;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+$tile-colors: (
+  'red': $ui-red,
+  'blue': $ui-blue,
+  'green': $ui-green,
+  'purple': $ui-purple,
+  'orange': $ui-orange,
+  'pink': $ui-pink,
+  'white': $ui-white,
+);
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  &__row {
+    display: flex;
+    gap: 8px;
+  }
+
+  &_small {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  &_small &__row {
+    gap: 4px;
+  }
+}
+
+.tile {
+  width: min(15vw, 72px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-family: $logo-font;
+  font-size: min(9vw, 42px);
+  font-weight: 700;
+  color: $ui-ink;
+  @include ui-box(14px);
+
+  .title__row &:nth-child(odd) {
+    transform: rotate(-3deg);
+  }
+
+  .title__row &:nth-child(even) {
+    transform: rotate(2deg);
+  }
+
+  .title_small & {
+    width: min(10vw, 44px);
+    font-size: min(6vw, 26px);
+    @include ui-box(10px, 3px);
+  }
+
+  @each $name, $color in $tile-colors {
+    &_#{$name} {
+      background: $color;
+    }
+  }
+}
+
+.banner {
+  padding: 12px 24px;
+  font-family: $logo-font;
+  font-size: clamp(15px, 3.5vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $ui-white;
+  background: $ui-ink;
+  border-radius: 14px;
+  transform: rotate(-1.5deg);
+}

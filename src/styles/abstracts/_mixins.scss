@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+@mixin ui-box($radius: $ui-radius, $shadow: $ui-shadow) {
+  border: $ui-outline solid $ui-ink;
+  border-radius: $radius;
+  box-shadow: $shadow $shadow 0 $ui-ink;
+}
+
+@mixin ui-press($shadow: $ui-shadow) {
+  cursor: pointer;
+  transition:
+    transform 100ms $timing-function,
+    box-shadow 100ms $timing-function;
+
+  @media (hover: hover) {
+    &:not(:disabled):hover {
+      transform: translate(-1px, -1px);
+      box-shadow: ($shadow + 1px) ($shadow + 1px) 0 $ui-ink;
+    }
+  }
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: $ui-outline solid $ui-blue;
+    outline-offset: 4px;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-max-width) {
+    @content;
+  }
+}

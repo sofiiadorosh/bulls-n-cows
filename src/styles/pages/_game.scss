@@ -1,0 +1,97 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.board {
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.guess {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  &__input {
+    min-width: 140px;
+    padding: 8px 12px;
+    flex: 1;
+    font-family: $logo-font;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: $ui-ink;
+    background: $ui-cream;
+    border: $ui-outline solid $ui-ink;
+    border-radius: 12px;
+    @include focus-ring;
+
+    &::placeholder {
+      font-family: $ui-font;
+      font-size: 16px;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+  }
+
+  .button {
+    align-self: stretch;
+  }
+
+  &__message {
+    min-height: 1.5em;
+    flex-basis: 100%;
+    font-weight: 800;
+    color: $ui-error;
+  }
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  counter-reset: guess;
+
+  &__item {
+    padding: 8px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    background: $ui-cream;
+    border: 2px solid $ui-ink;
+    border-radius: 14px;
+    counter-increment: guess;
+
+    &::before {
+      min-width: 1.5em;
+      font-weight: 800;
+      color: $ui-muted;
+      content: counter(guess);
+    }
+
+    .digit-tiles__tile {
+      background: $ui-white;
+    }
+  }
+
+  &__result {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.win {
+  align-items: center;
+  text-align: center;
+  background: $ui-purple;
+
+  &__text {
+    font-weight: 800;
+  }
+}

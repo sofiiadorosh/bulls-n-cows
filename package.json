@@ -1,0 +1,67 @@
+{
+  "name": "bulls-n-cows",
+  "version": "1.0.0",
+  "description": "A number-guessing game inspired by Bulls and Cows, where players guess a secret number with unique digits and receive feedback on correct digits and their positions.",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "functional programming",
+    "pure functions",
+    "immutability",
+    "recursion",
+    "currying",
+    "memoization",
+    "tdd",
+    "first",
+    "jest",
+    "big o",
+    "eslint",
+    "prettier",
+    "husky"
+  ],
+  "homepage": "https://github.com/sofiiadorosh/bulls-n-cows#readme",
+  "bugs": {
+    "url": "https://github.com/sofiiadorosh/bulls-n-cows/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofiiadorosh/bulls-n-cows.git"
+  },
+  "author": "Sofiia Dorosh",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest --passWithNoTests",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{js,json,html,css,scss,md}": "prettier --check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "jest": "^30.5.2",
+    "lint-staged": "^17.6.0",
+    "prettier": "3.9.10",
+    "sass": "^1.108.1",
+    "ts-jest": "^29.4.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5"
+  }
+}
